@@ -1,5 +1,5 @@
 function NavBar(){
-    return
+    return(
     <>
     <ul>
         <li>test1</li>
@@ -8,8 +8,7 @@ function NavBar(){
         <li>test1</li>
     </ul>
     
-    
-    
     </>
+    )
 }
 export default NavBar;

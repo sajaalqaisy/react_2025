@@ -1,5 +1,9 @@
 import React from "react";
-const TodoList =({text})=>(
-    <button onClick={onclick}>{Text}</button>
-    )
-    export default Button;
+const TodoList = ({todos})=>(
+     <ul>
+     {todos.map((y,index)=>
+     <li key={index}>{y}</li>
+)}
+     </ul>
+     )
+export default TodoList;

@@ -1,5 +1,5 @@
 import React from "react";
-const Button =({text,onclick})=>(
-<button onClick={onclick}>{Text}</button>
+const Button =({text,onClick})=>(
+    <button onClick={onClick}>{text}</button>
 )
 export default Button;
