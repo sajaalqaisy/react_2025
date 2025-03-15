@@ -19,8 +19,6 @@ export default function Info() {
         <>
          <h1>this is the fact</h1>
          <p>{fact}</p>
-
-
         </>
     )
 }
