@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/sajaalqaisy/react_2025/issues"
   },
-  "homepage": "https://github.com/sajaalqaisy/react_2025#readme"
+  "homepage": "https://github.com/sajaalqaisy/react_2025#readme",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.7"
+  }
 }
