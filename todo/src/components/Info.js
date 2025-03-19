@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react"
+import MyContext from "./myContext"
 export default function Info() {
+    const {user,setUser}=useContext(MyContext)
     const [fact,setFact]=useState('Loading.....')
     const API_URL="https://catfact.ninja/fact"
     const fetchData = async()=>{
@@ -17,8 +19,10 @@ export default function Info() {
    
     return(
         <>
-         <h1>this is the fact</h1>
+         <h1>this is the fact for User: {user ? user:'Gust'}</h1>
          <p>{fact}</p>
+
+
         </>
     )
 }
