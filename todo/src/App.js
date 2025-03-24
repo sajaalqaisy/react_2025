@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ButtonAppBar from './components/navBar';
-// import Input from './components/Input';
+import Input from './components/Input';
 import Title from './components/Title';
 import TodoList from './components/TodoList';
 import Button from './components/Button';
@@ -10,6 +10,8 @@ import React,{useState,useEffect} from 'react';
 import Info from './components/Info';
 import { useContext } from 'react';
 import MyContext from './components/myContext';
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import ResponsiveGrid from './components/cards';
 function App() {
   const {user,setUser}=useContext(MyContext)
   const [inputValue,setinputValue]=useState('')
@@ -25,19 +27,13 @@ function App() {
     //______
   }
   return (
-    <div className="App">
+   <BrowserRouter>
       <ButtonAppBar/>
-      <h1>hi {user ? user:'Gust'}</h1>
-      <input type='text'
-      placeholder='inter user'
-      onChange={(event)=>{setUser(event.target.value)}}
-      />
-      <Title text="this is react app"/>
-      {/* <Input value={inputValue} onChange={setinputValue}/> */}
-      <Button text={'add to do'} onClick= {handelAdd} />
-      <TodoList todos={todos}/>
-      <Info/>
-    </div>
+      <Routes>
+          <Route path='/info' element={<Info/>}/>
+          <Route path='/' element={<ResponsiveGrid/>}/>
+          </Routes>
+   </BrowserRouter>
   );
 }
 
