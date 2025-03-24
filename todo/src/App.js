@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/navBar';
-import Input from './components/input';
-import Title from './components/title';
+import ButtonAppBar from './components/navBar';
+// import Input from './components/Input';
+import Title from './components/Title';
 import TodoList from './components/TodoList';
-import Button from './components/button';
+import Button from './components/Button';
 import { saveToLocalstorage,getFromLocalstorage } from './utilis/storage';
 import React,{useState,useEffect} from 'react';
 import Info from './components/Info';
@@ -32,10 +32,10 @@ function App() {
       placeholder='inter user'
       onChange={(event)=>{setUser(event.target.value)}}
       />
-      {/* <Title text="this is react app"/>
-      <Input value={inputValue} onChange={setinputValue}/>
+      <Title text="this is react app"/>
+      {/* <Input value={inputValue} onChange={setinputValue}/> */}
       <Button text={'add to do'} onClick= {handelAdd} />
-      <TodoList todos={todos}/> */}
+      <TodoList todos={todos}/>
       <Info/>
     </div>
   );
